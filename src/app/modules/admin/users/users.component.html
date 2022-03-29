@@ -1,0 +1,31 @@
+
+<div class="container">
+  
+  
+
+      <table class="table">
+          <tr>
+            <th>NAME</th>
+            <th>email</th>
+            <th>Date de creation</th>
+            <th>action</th>
+          </tr>
+
+          <tr *ngFor="let user of providers">
+          
+              <td>{{user.username}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.date_joined}}</td>
+              <td>
+                <button *ngIf="!user.is_approved" class="btn btn-primary" (click)="approuver(user.id)">approuver</button>
+                <!-- <button *ngIf="user.is_approved" (click)="approuver(user.id)">désapprouver</button> -->
+                <span *ngIf="user.is_approved">approuvé</span>
+              </td>
+  
+          </tr>
+      </table>
+
+  
+
+  </div>
+  
