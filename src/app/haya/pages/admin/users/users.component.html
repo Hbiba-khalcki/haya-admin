@@ -1,8 +1,5 @@
 
-<div class="container">
-  
-  
-
+<div class="container" style="min-height: 600px;">
       <table class="table">
           <tr>
             <th>NAME</th>
@@ -10,7 +7,6 @@
             <th>Date de creation</th>
             <th>action</th>
           </tr>
-
           <tr *ngFor="let user of providers">
           
               <td>{{user.username}}</td>
@@ -24,8 +20,7 @@
   
           </tr>
       </table>
-
-  
-
+      <mat-paginator [pageSize]="2" [pageSizeOptions]="[2, 4, 6, 10, 20]">
+      </mat-paginator>
   </div>
   

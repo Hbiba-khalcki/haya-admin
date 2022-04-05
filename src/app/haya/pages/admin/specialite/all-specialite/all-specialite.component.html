@@ -1,0 +1,30 @@
+<div class="container ">
+    <div class="d-block w-100">
+        <div class="navbar w-100">
+       <ul class="navbar navbar-nav  d-myflex">
+            <li>
+                <button class="btn btn-outline-info ml-2" (click)="onSaveSpecialite()">Add</button>
+            </li>
+        </ul> 
+    </div>
+    <div class="w-100">
+                <table class="table w-100">
+                    <tr>
+                        <th>Nom de specialite</th><th>Actions</th>
+                    </tr>
+                    <tr *ngFor="let s of specialite ">
+                        <td>{{s.name}}</td>
+                        <td>
+                            <button  class="btn btn-danger" (click)="onDelete(s)">
+                                <span class="fa fa-trash-o"></span>
+                            </button>
+                            <button  class="btn btn-info" >
+                                <span class="fa fa-edit" (click)="onUpdateSpecialite(s)"></span>
+                            </button>
+
+                        </td>
+                    </tr>
+                </table>
+    </div>
+</div>
+

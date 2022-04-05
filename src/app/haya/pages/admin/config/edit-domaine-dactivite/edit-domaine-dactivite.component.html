@@ -1,0 +1,39 @@
+
+<div class="container" *ngIf="categorieFormGroup">
+  
+    <form [formGroup]="categorieFormGroup">  
+    <div class="form-group">
+        <div class="form-group">
+            <div class="md-form">
+                <label> Nom Categorie </label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+
+            <div class="md-form">
+                <label>Description</label>
+                <textarea type="text" id="form7" class="md-textarea form-control" mdbInput formControlName="description"></textarea>  
+            </div>
+            <!-- file part-->
+            <div class="file-field">
+                <div class="btn btn-rounded purple-gradient btn-sm float-left waves-effect waves-light">
+                <span>photo de categorie </span>
+                <input type="file" (change)="onChange($event)">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="telecharger  votre fichier">
+                </div>
+            </div>
+            <div class="btn-center">
+                <button mat-button class="btn-gray" routerLink="/config"> Précédent </button>
+                <button mat-raised-button color="primary"  (click)="onUpdateCategorie()"> Enregistrer </button>
+              </div>
+        </div>
+
+
+       
+
+  
+
+    </div>
+    </form>
+</div>

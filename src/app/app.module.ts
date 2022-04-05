@@ -1,3 +1,4 @@
+
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,12 +13,8 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
-
 import { SigninComponent } from './haya/pages/auth/signin/signin.component';
 import { SignupComponent } from './haya/pages/auth/signup/signup.component';
-
-
-
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -49,6 +46,7 @@ import { LandingHomeComponent } from './modules/landing/home/home.component';
 
 
 
+
 const routerConfig: ExtraOptions = {
     preloadingStrategy       : PreloadAllModules,
     scrollPositionRestoration: 'enabled'
@@ -63,10 +61,7 @@ const routerConfig: ExtraOptions = {
         ForgotPasswordComponent, 
         ForgotPasswordComponent,
         ResetPasswordComponent,
-        SigninComponent, 
-
-        
-
+        SigninComponent
 
     ],
     imports     : [
@@ -112,7 +107,8 @@ const routerConfig: ExtraOptions = {
         MatProgressSpinnerModule,
         FuseCardModule,
         FuseAlertModule,
-        SharedModule
+        SharedModule,
+
     ],
     exports:[
         SigninComponent, 

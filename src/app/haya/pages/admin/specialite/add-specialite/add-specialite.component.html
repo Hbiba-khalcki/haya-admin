@@ -1,0 +1,38 @@
+
+<div class="container cat" *ngIf="specialiteFormGroup">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+
+        <div class="col-md-8">
+            <form [formGroup]="specialiteFormGroup">  
+                <div class="form-group">
+                    <div class="md-form">
+                        <label> Nom Specialite </label>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+        
+                    <div class="md-form">
+                        <label>Description</label>
+                        <textarea type="text" id="form7" class="md-textarea form-control" mdbInput formControlName="description"></textarea>  
+                    </div>
+                    <label>choisi un categorie</label> <br>
+                    <select formControlName="category">
+                       
+                        <option *ngFor="let cat of categorie" [value]="cat.id">
+                            {{cat.name}}
+                        </option>
+                      </select>
+                    <div class="btn-center">
+                        <button mat-button class="btn-gray" routerLink="/config"> Précédent </button>
+                        <button mat-raised-button color="primary"  (click)="onSaveSpecialite()"> Enregistrer </button>
+                      </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-md-2">
+        </div>
+    </div>
+
+</div>
